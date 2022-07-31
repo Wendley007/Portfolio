@@ -1,0 +1,950 @@
+body,
+html {
+    background-color: #000000;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f27609;
+    text-decoration: none;
+}
+
+
+/* Esteliza o cabecalho da primeira pagina*/
+#cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 0 15px;
+    background: #1f2020;
+    overflow-y: auto;
+}
+
+#cabecalho .perfil img {
+    margin: 15px auto;
+    display: block;
+    width: 140px;
+    border: 4px solid #000000;
+}
+
+
+#cabecalho .perfil h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    font-family: "Poppins", sans-serif;
+}
+
+#cabecalho .perfil .social_icones a {
+    font-size: 24px;
+    display: inline-block;
+    background: #000000;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 39px;
+    height: 36px;
+    transition: 0.3s;
+    margin-left: 4px;
+    margin-top: 21px;
+}
+
+.social_icones {
+    animation-name: conteudo;
+    animation-duration: 2s;
+}
+
+
+#cabecalho .perfil .social_icones a:hover {
+    background: #f27609;
+    color: #fff;
+    text-decoration: none;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.logo_edit {
+    border-radius: 100% !important;
+}
+
+
+/* Esteliza o menu da primeira pagina*/
+.menu {
+    padding: 30px 0 0 0;
+
+    animation-name: navegacao;
+    animation-duration: 4s;
+}
+
+
+.menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu>ul>li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.menu a,
+.menu a:focus {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    padding: 12px 15px;
+    margin-bottom: -3px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.menu a i,
+.menu a:focus i {
+    font-size: 24px;
+    padding-right: 8px;
+    color: #ffffff;
+}
+
+.menu a:hover,
+.menu .ativo,
+.menu .ativo:focus,
+.menu li:hover>a {
+    text-decoration: none;
+    color: #f27609;
+}
+
+.menu a:hover i,
+.menu .ativo i,
+.menu .ativo:focus i,
+.menu li:hover>a i {
+    color: #f27609;
+}
+
+
+
+/* Esteliza a imagem da capa da primeira pagina*/
+#capa {
+    color: white;
+    padding-bottom: 20px;
+    background-color: #2b2b2b;
+    margin-top: -10px;
+    background: url('../img/planodefundo.png');
+    margin-left: 12px;
+    margin-right: -7px;
+    background-size: cover;
+    margin-bottom: -7px;
+    margin-block: -30px;
+}
+
+#capa span {
+    color: #f27609;
+    display: block;
+    margin-left: 438px;
+    margin-top: -53px;
+    font-size: 100px;
+}
+
+#capa div {
+    display: inline-block;
+    height: 650px;
+}
+
+.editar-imagem {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.editar-imagem:after {
+    background: none repeat scroll 0 0 #000;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.titulo_perfil {
+    position: relative;
+    z-index: 9;
+    padding: 30px;
+
+    animation-name: titulo-capa;
+    animation-duration: 2s;
+
+}
+
+.titulo_perfil h1 {
+    text-transform: uppercase;
+    font-size: 48px;
+    margin-top: 170px;
+    font-weight: 400;
+    line-height: 54px;
+    margin-left: 530px;
+    animation: animacao 1s infinite alternate;
+    color: white;
+}
+
+.titulo_perfil h2 {
+    font-size: 16px;
+    font-weight: 100;
+    margin-left: 530px;
+    margin-top: 41px;
+    animation: type 4s steps(60, end);
+}
+
+
+
+/* ------------------------------------- Esteliza a pagina de PORTFOLIO -------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+
+
+#menu_secundario {
+    background-color: #000000;
+    color: white;
+    height: 50px;
+
+    animation-name: navegacao;
+    animation-duration: 4s;
+}
+
+#menu_secundario ul {
+    margin-top: 0;
+    list-style: none;
+    padding-left: 0;
+    text-align: right;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+
+#menu_secundario li {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+#menu_secundario a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu_secundario a:hover,
+#menu_secundario .ativo,
+#menu_secundario .ativo:focus,
+#menu_secundario li:hover>a {
+    text-decoration: none;
+    color: #f27609;
+}
+
+#menu_secundario a:hover i,
+#menu_secundario .ativo i,
+#menu_secundario .ativo:focus i,
+#menu_secundario li:hover>a i {
+    color: #f27609;
+}
+
+
+#main h1 {
+    color: #e6e6e6;
+    font-weight: normal;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 85px;
+    margin-left: 12px;
+    position: relative;
+
+    animation-name: conteudo;
+    animation-duration: 2s;
+}
+
+
+#main h2 {
+    color: #f27609;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 132px;
+    position: relative;
+}
+
+#main h3 {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    position: relative;
+
+    animation-name: conteudo;
+    animation-duration: 2s;
+}
+
+#main p {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 24px;
+    text-align: justify;
+    position: relative;
+}
+
+.editar-imagem2 {
+    height: 953px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-position: center;
+    padding-bottom: 5px;
+    background: url(../img/planodefundo.png);
+    margin-right: 44px;
+    background-size: cover;
+    margin-block: 164px;
+    margin-top: -86px;
+}
+
+.editar-imagem2:after {
+    background: none repeat scroll 0 0 #000;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: absolute;
+    width: 100%;
+}
+
+.imagem1 {
+    width: 616px;
+    height: 544px;
+    display: inline-block;
+    margin-right: -47px;
+    margin-bottom: 56px;
+    overflow: hidden;
+    margin-left: 14px;
+    margin-top: -121px;
+    background-size: cover;
+    position: relative;
+
+    animation-name: perfil-capa;
+    animation-duration: 2s;
+
+}
+
+.Imagem1 a {
+    text-decoration: none;
+}
+
+.imagem2 {
+    width: 657px;
+    height: 550px;
+    display: inline-block;
+    margin-right: -306px;
+    margin-bottom: 52px;
+    background-size: contain;
+    overflow: hidden;
+    margin-left: 86px;
+    margin-top: 5px;
+    background-size: cover;
+    position: relative;
+
+    animation-name: navegacao;
+    animation-duration: 4s;
+}
+
+.titulo_perfil2 h1 {
+
+    text-transform: uppercase;
+    font-size: 48px;
+    margin-top: 30px;
+    font-weight: 400;
+    line-height: 2;
+    margin-left: -160px;
+    animation: go-back 1s infinite alternate;
+    color: white;
+}
+
+.titulo_perfil2 span {
+    color: #f27609;
+    font-size: 50px;
+    animation-name: conteudo;
+    animation-duration: 2s;
+}
+
+.conteudo {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    padding-top: 120px;
+    transition: 1s;
+}
+
+.conteudo:hover {
+    opacity: 0.8;
+    transition: 1s;
+
+}
+
+.conteudo-texto {
+    text-align: center;
+}
+
+.conteudo-texto h1 {
+    font-size: 16px;
+    color: #f27609;
+    text-transform: uppercase;
+    margin-top: 0px;
+}
+
+.conteudo-texto h2 {
+    text-transform: none;
+    font-weight: 100;
+    margin-top: 0;
+}
+
+
+/* ------------------------------------- Esteliza a pagina de FOTOGRAFIAS -------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+
+.editar-imagem3 {
+    height: 1430px;
+    position: absolute;
+    width: 100%;
+    background-position: center;
+    background: url(../img/planodefundo.png);
+    background-size: cover;
+    margin-top: -86px;
+}
+
+.editar-imagem3:after {
+    background: none repeat scroll 0 0 #000;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: absolute;
+    width: 100%;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.imagem {
+    width: 327px;
+    height: 300px;
+    overflow: hidden;
+    margin: 2px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.editor {
+    margin: -15px;
+    float: left;
+    height: 300px;
+    margin-right: 25px;
+    width: 380px;
+    cursor: pointer;
+    margin-left: -102px;
+    transition: all linear 0.4s;
+}
+
+.editor:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+
+#modelo_img {
+    width: 1110px;
+    height: 862px;
+    margin-top: -738px;
+    margin-left: -3px;
+}
+
+.modelo_ativo #modelo_img {
+    transform: scale(1);
+}
+
+
+
+.zoom {
+    width: 101vw;
+    position: fixed;
+    visibility: hidden;
+    z-index: 1;
+    margin: 58px;
+    margin-block: 43px;
+}
+
+.modelo_ativo {
+    visibility: visible;
+    opacity: 1;
+}
+
+.zoom {
+    width: 101vw;
+    position: fixed;
+    visibility: hidden;
+    z-index: 1;
+    margin: 58px;
+    margin-block: 43px;
+}
+
+.fundo_escuro:after {
+    background: none repeat scroll 0 0 #000;
+    content: "";
+    margin-left: -82px;
+    margin-top: -452px;
+    margin-bottom: 91px;
+    height: 1023px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.modelo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#frase h2 {
+    font-size: 12px;
+    color: #f4f6fd;
+    text-align: center;
+
+    animation-name: navegacao;
+    animation-duration: 4s;
+}
+
+.zoom,
+img {
+    display: inline-block;
+}
+
+#voltar {
+    height: 126px;
+    width: 130px;
+    cursor: pointer;
+    margin-left: -149px;
+    margin-top: -850px;
+    position: relative;
+}
+
+#proximo {
+    height: 126px;
+    width: 130px;
+    cursor: pointer;
+    margin-left: -9px;
+    margin-top: -850px;
+    position: relative;
+}
+
+#fechar {
+    color: #fff;
+    position: absolute;
+    top: -441px;
+    right: 162px;
+    padding: 6px 13px;
+    font-size: 25px;
+    border: solid 2px #fff;
+    cursor: pointer;
+}
+
+#fechar {
+    background-color: #f00;
+}
+
+#fechar:hover {
+    background-color: rgb(255, 255, 255);
+    border: solid 1px rgb(199, 0, 0);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+
+}
+
+.modelo_ativo {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modelo_ativo #modelo {
+    transform: scale(1);
+}
+
+.botao_voltar {
+    color: #ffffff;
+    font-size: 15px;
+    margin-left: 600px;
+    position: relative;
+    font-weight: bold;
+    border: 2px solid #f27609;
+    background: #000000;
+    padding: 6px;
+
+}
+
+.botao_voltar:hover {
+    color: #f27609;
+    font-size: 16px;
+    margin-left: 600px;
+    position: relative;
+    border: 2px solid #e7e7e7;
+}
+
+
+/* ------------------------------------- Esteliza a pagina de Curriculo -------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+
+
+#main2 {
+
+    animation-name: conteudo;
+    animation-duration: 2s;
+}
+
+#main2 .editar-imagem4 {
+    height: 2195px;
+    position: absolute;
+    width: 100%;
+    background: url(../img/planodefundo2.jpeg);
+    background-size: cover;
+    border-radius: 80px;
+}
+
+.editar-imagem4:after {
+    background: none repeat scroll 0 0 #000;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    width: 100%;
+}
+
+#formulario img {
+    float: left;
+    width: 250px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 12px;
+    position: relative;
+    border-radius: 30px;
+}
+
+
+#main2 h1 {
+    animation-name: conteudo;
+    animation-duration: 2s;
+    padding: 52px;
+}
+
+.titulo_perfil3 h1 {
+    color: #e6e6e6;
+    font-weight: normal;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 2px;
+    margin-left: 12px;
+    position: relative;
+    animation: go-back 1s infinite alternate;
+    text-transform: uppercase;
+}
+
+.titulo_perfil3 span {
+    color: #f27609;
+    font-size: 50px;
+    animation-name: conteudo;
+    animation-duration: 2s;
+}
+
+#formulario h2 {
+    margin: 24px;
+    color: #f27609;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 100px;
+    position: relative;
+}
+
+#formulario h3 {
+    margin: 24px;
+    color: #f27609;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: normal
+}
+
+#formulario p {
+    margin: 24px;
+    color: white;
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 24px;
+    text-align: justify;
+    position: relative;
+}
+
+
+
+hr {
+    display: block;
+    border-style: inset;
+    border-width: 1px;
+    position: relative;
+}
+
+/* ------------------------------------- Esteliza a pagina de Contato -------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+
+
+#main2 .editar-imagem5 {
+    height: 640px;
+    position: absolute;
+    width: 100%;
+    background: url(../img/planodefundo2.jpeg);
+    background-size: cover;
+    border-radius: 80px;
+}
+
+.editar-imagem5:after {
+    background: none repeat scroll 0 0 #000;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    width: 100%;
+}
+
+.social-img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.social_icones3 i {
+    font-size: 50px;
+    position: relative;
+    margin-left: 12px;
+    color: #fff;
+}
+
+.social_icones3 i:hover {
+    background: #f27609;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 60px;
+}
+
+
+
+/* Esteliza a area do rodapé da primeira pagina*/
+#footer {
+    padding: 15px;
+    color: #f4f6fd;
+    font-size: 14px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 9999;
+    background: #000000;
+
+    animation-name: conteudo;
+    animation-duration: 2s;
+}
+
+#footer .copyright {
+    text-align: center;
+    font-size: 13px;
+}
+
+#footer .creditos {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 13px;
+    color: #eaebf0;
+}
+
+#footer a {
+    font-size: 14px;
+    color: #f27609;
+}
+
+
+/* Esteliza a area do rodapé da segunda pagina em diante*/
+
+.footer2 {
+    background: none repeat scroll 0 0 #232020;
+    color: rgb(243, 243, 243);
+    padding: 0px 0 20px;
+    text-align: center;
+    max-width: 800;
+    border: 1px solid #f27609;
+    position: relative;
+    margin-top: 87px;
+    font-size: 16px;
+}
+
+/* Esteliza o texto da MARCA no rodapé da pagina*/
+
+.footer-texto span {
+    color: white;
+    position: relative;
+}
+
+.footer-texto h2 {
+    color: #f27609;
+    font-weight: 200;
+    text-align: center;
+    position: relative;
+}
+
+
+/* Esteliza os logos sociais no rodapé da pagina*/
+
+.area-rodape {
+    background: none repeat scroll 0 0 #000;
+    color: white;
+    padding: 5px 0 5px;
+    text-align: center;
+    border: 1px solid #f27609;
+    font-size: 13px;
+    position: relative;
+}
+
+.social_icones2 a {
+    font-size: 24px;
+    display: inline-block;
+    background: #000000;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 39px;
+    height: 36px;
+    transition: 0.3s;
+    margin-left: 4px;
+    margin-top: -31px;
+    position: relative;
+}
+
+.social_icones2 {
+    animation-name: conteudo;
+    animation-duration: 2s;
+}
+
+
+.social_icones2 a:hover {
+    background: #f27609;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+/* adicionando animação nas paginas */
+
+@keyframes navegacao {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes conteudo {
+    0% {
+        opacity: 0;
+        transform: translate(-20px, 0px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px)
+    }
+}
+
+@keyframes titulo-capa {
+    0% {
+        opacity: 0;
+        transform: translate(0px, -20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px)
+    }
+}
+
+
+@keyframes perfil-capa {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px)
+    }
+}
+
+@keyframes animacao {
+    0% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

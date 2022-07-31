@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <title>Inicio</title>
+
+    <!-- Estilos-->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+
+    <!-- cabecalho e menu -->
+    <header id="cabecalho">
+        <div class="perfil">
+            <img src="img/perfil.jpeg" alt="" class="logo_edit">
+            <h1><a href="inicio.html">Wendley Santos</a></h1>
+            <div class="social_icones">
+                <a href="https://www.google.com.br" target="Google"><i class="fa fa-google"></i></a>
+                <a href="https://www.facebook.com/Wendlley007/" target="facebook"><i
+                        class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/wendlley.santtos/" class="instagram"><i
+                        class="fa fa-instagram"></i></a>
+                <a href="https://mobile.twitter.com/Toneshifterzs/" target="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://br.linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+        <nav class="menu" class="navegacao">
+            <ul>
+                <li><a href="inicio.html" class="ativo"><i class="fa fa-bars"></i><span> Inicio</span></a></li>
+                <li><a href="portfolio.html"><i class="fa fa-book"></i><span> Portfólio</span></a></li>
+                <li><a href="fotografia.html"><i class="fa fa-camera-retro"></i><span> Fotografias</span></a>
+                </li>
+                <li><a href="curriculo.html"><i class="fa fa-envelope"></i><span> Currículo</span></a></li>
+                <li><a href="contato.html"><i class="fa fa-user"></i><span> Contato</span></a></li>
+                <li id="icones" class="icones" onclick="openNav()"></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <!-- area de informação -->
+    <section id="capa">
+        <div class="editar-imagem"></div>
+        <div class="titulo_perfil">
+            <h1>Desenvolvedor <span>Web</span></h1>
+            <h2>Designer Gráfico - Estudante</h2>
+        </div>
+    </section>
+
+
+
+
+    <!-- area do rodapé -->
+    <footer id="footer">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Portfolio</span></strong>
+        </div>
+        <div class="creditos">
+            Desenvolvido por <a href="#">Wendley</a>
+        </div>
+    </footer>
+
+
+    <script>
+        function openNav() {
+
+            var x = document.getElementById("navegacao");
+
+            if (x.className === "navegacao") {
+                x.className += " menujs";
+                document.getElementById("icones").innerHTML = "&Cross;";
+
+            } else {
+                x.className = "navegacao";
+                document.getElementById("icones").innerHTML = "#";
+
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>
