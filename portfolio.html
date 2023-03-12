@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+    <!-- Configuração do media query-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio</title>
+
+    <!-- Estilos-->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- Scripts-->
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+
+
+    <nav id="menu_secundario" class="menu_secundario">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-bars"></i><span> Inicio</span></a></li>
+            <li><a href="portfolio.html" class="ativo"><i class="fa fa-book"></i><span> Portfólio</span></a></li>
+            <li><a href="fotografia.html"><i class="fa fa-camera-retro"></i><span> Fotografias</span></a>
+            </li>
+            <li><a href="curriculo.html"><i class="fa fa-envelope"></i><span> Currículo</span></a></li>
+            <li><a href="contato.html"><i class="fa fa-user"></i><span> Contato</span></a></li>
+            <li class="icon" id="icon" onclick="openNav()" style='font-size:37px;'>&#9776;</li>
+        </ul>
+    </nav>
+
+    <section id="main">
+
+        <div class="editar-imagem2"></div>
+        <div class="titulo_perfil2">
+            <h1>Portfólio <span>Projetos</span></h1>
+        </div>
+        <div class="container flex">
+            <div style="background-image: url('img/extraord1nario.jpeg')" class="imagem1">
+                <a href="https://extraord1nario.webnode.page/">
+                    <div class="conteudo">
+                        <div class="conteudo-texto">
+                            <h2> Extraord1nário </h2>
+                            <h3> Site </h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="background-image: url('img/imagem2.jpg')" class="imagem2">
+                <a
+                    href="https://br.indeed.com/conselho-de-carreira/encontrando-emprego/o-que-web-designer-faz#:~:text=O%20que%20um%20web%20designer%20faz%20%C3%A9%20criar%20e%20desenvolver,e%20das%20tecnologias%20da%20informa%C3%A7%C3%A3o.">
+                    <div class="conteudo">
+                        <div class="conteudo-texto">
+                            <h2>Web Design</h2>
+                            <h3>Venha conheçer</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <a class="botao_voltar" href="index.html">&larr; Voltar ao início<a>
+    </section>
+
+    <footer>
+        <div class="footer2">
+            <div class="footer-texto">
+                <h2>DESENVOLVEDOR<span> WEB</span></h2>
+                <p>" Acredito que tudo seja um desafio que pode ser descoberto. "
+                </p>
+
+            </div>
+            <div class="area-rodape">
+                <p>&copy; 2023. Todos os direitos reservados. Codificado por
+                    <a href="index.html" target="_blank"><i class="fa fa-hashtag"></i>Wendley Santos</a>
+                </p>
+                <div class="social_icones2">
+                    <a href="https://www.google.com.br" target="Google"><i class="fa fa-google"></i></a>
+                    <a href="https://www.facebook.com/wendlley.santtos.7/" target="facebook"><i
+                            class="fa fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/wendlley.santtos/" class="instagram"><i
+                            class="fa fa-instagram"></i></a>
+                    <a href="https://mobile.twitter.com/Toneshifterzs/" target="twitter"><i
+                            class="fa fa-twitter"></i></a>
+                    <a href="https://br.linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openNav() {
+
+            var x = document.getElementById("menu_secundario");
+
+            if (x.className === "menu_secundario") {
+                x.className += " menu_secundariojs";
+                document.getElementById("icon").innerHTML = "&Cross;";
+
+            } else {
+                x.className = "menu_secundario";
+                document.getElementById("icon").innerHTML = "&#9776;";
+
+            }
+        }
+    </script>
+</body>
+
+</html>

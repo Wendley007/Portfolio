@@ -1,0 +1,1323 @@
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #000000;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f27609;
+  text-decoration: none;
+}
+
+/* Esteliza o cabecalho da primeira pagina*/
+
+
+#cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  z-index: 9997;
+  transition: all 0.5s;
+  background: #1f2020;
+  overflow-y: auto;
+  text-align-last: center;
+}
+
+#cabecalho a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#cabecalho a:hover {
+  color: #f27609;
+  text-decoration: none;
+}
+
+#cabecalho .perfil img {
+  margin: 15px auto;
+  display: block;
+  width: 140px;
+  border: 2px solid #000000;
+  text-align-last: center;
+}
+
+#cabecalho .perfil h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  margin-left: -4px;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+
+#cabecalho .perfil .social_icones a {
+  font-size: 24px;
+  display: inline-block;
+  background: #000000;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 39px;
+  height: 39px;
+  transition: 0.3s;
+  margin-left: -2px;
+  margin-top: 15px;
+  text-align-last: center;
+}
+
+.social_icones {
+  animation-name: conteudo;
+  animation-duration: 2s;
+}
+
+#cabecalho .perfil .social_icones a:hover {
+  background: #f27609;
+  color: #fff;
+  text-decoration: none;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+.logo_edit {
+  border-radius: 100% !important;
+}
+
+/* Esteliza o menu da primeira pagina*/
+.menu {
+  padding: 30px 0 0 0;
+
+  animation-name: navegacao;
+  animation-duration: 4s;
+}
+
+.menu * {
+  padding: 2px;
+  list-style: none;
+  margin-top: -8px;
+  font-size: 14px;
+}
+
+.menu *.icone {
+  color: #f27609;
+  display: none;
+  list-style: none;
+  margin-top: -8px;
+  font-size: 18px;
+}
+
+.menu *.icone:hover {
+  cursor: pointer;
+}
+
+.menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.menu a,
+.menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  padding: 15px 5px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.menu a i,
+.menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #ffffff;
+  font-size: 10px;
+  padding-right: 17px;
+  position: relative;
+}
+
+.menu a:hover,
+.menu .ativo,
+.menu .ativo:focus,
+.menu li:hover > a {
+  text-decoration: none;
+  color: #f27609;
+}
+
+.menu a:hover i,
+.menu .ativo i,
+.menu .ativo:focus i,
+.menu li:hover > a i {
+  color: #f27609;
+}
+
+/* Esteliza a imagem da capa da primeira pagina*/
+#capa {
+  color: white;
+  background: url(../img/planodefundo.png);
+  background-size: cover;
+}
+
+#capa span {
+  color: #f27609;
+  display: block;
+  margin-left: 465px;
+  margin-top: -53px;
+  font-size: 100px;
+}
+
+#capa div {
+  display: inline-block;
+  height: 542px;
+}
+
+.editar-imagem {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.editar-imagem:after {
+  background: none repeat scroll 0 0 #000;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.titulo_perfil {
+  position: relative;
+  z-index: 9;
+  padding: 30px;
+
+  animation-name: titulo-capa;
+  animation-duration: 2s;
+}
+
+.titulo_perfil h1 {
+  text-transform: uppercase;
+  font-size: 48px;
+  margin-top: 170px;
+  font-weight: 400;
+  line-height: 54px;
+  margin-left: 256px;
+  animation: animacao 1s infinite alternate;
+  color: white;
+}
+
+.titulo_perfil h2 {
+  font-size: 16px;
+  font-weight: 100;
+  margin-left: 262px;
+  margin-top: 41px;
+  animation: type 4s steps(60, end);
+}
+
+/* ------------------------------------- Esteliza a pagina de PORTFOLIO -------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+
+.menu_secundario {
+  background-color: #000000;
+  color: white;
+  height: 40px;
+
+  animation-name: navegacao;
+  animation-duration: 4s;
+}
+
+.menu_secundario ul {
+  justify-content: space-between;
+  padding-left: 0;
+  list-style: none;
+  text-align: right;
+  margin-top: 0;
+  height: 40px;
+  background-color: black;
+}
+
+.menu_secundario li {
+  display: inline-block;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 40px;
+}
+.menu_secundario li.icon {
+  color: #f27609;
+  display: none;
+  list-style: none;
+  font-size: 20px;
+}
+
+.menu_secundario *.icon:hover {
+  cursor: pointer;
+}
+
+.menu_secundario a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu_secundario a:hover,
+.menu_secundario .ativo,
+.menu_secundario .ativo:focus,
+.menu_secundario li:hover > a {
+  text-decoration: none;
+  color: #f27609;
+}
+
+.menu_secundario a:hover i,
+.menu_secundario .ativo i,
+.menu_secundario .ativo:focus i,
+.menu_secundario li:hover > a i {
+  color: #f27609;
+}
+
+#main {
+  margin-top: -6px;
+  height: 100%;
+  text-align-last: center;
+}
+#main h1 {
+  color: #e6e6e6;
+  font-weight: normal;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 85px;
+  margin-left: 12px;
+  position: relative;
+
+  animation-name: conteudo;
+  animation-duration: 2s;
+}
+
+#main h2 {
+  color: #f27609;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-top: 101px;
+  position: relative;
+}
+
+#main h3 {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+
+  animation-name: conteudo;
+  animation-duration: 2s;
+}
+
+#main p {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 24px;
+  text-align: justify;
+  position: relative;
+}
+
+#main .flex {
+  display: flex;
+}
+
+#main .container {
+  max-width: 1100px;
+  height: 450px;
+  margin: 0 auto;
+}
+
+.editar-imagem2 {
+  height: 740px;
+  position: absolute;
+  width: 100%;
+  background-position: center;
+  background: url(../img/planodefundo.png);
+  background-size: cover;
+  margin-top: -79px;
+}
+
+.editar-imagem2:after {
+  background: none repeat scroll 0 0 #000;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+}
+
+.imagem1 {
+  margin: 6px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  animation-name: perfil-capa;
+  animation-duration: 2s;
+  border-radius: 14px;
+}
+
+.Imagem1 a {
+  text-decoration: none;
+}
+
+.imagem2 {
+  margin: 6px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  animation-name: navegacao;
+  animation-duration: 4s;
+  border-radius: 14px;
+}
+
+.titulo_perfil2 h1 {
+  text-transform: uppercase;
+  animation: go-back 1s infinite alternate;
+  color: white;
+}
+
+.titulo_perfil2 span {
+  color: #f27609;
+  font-size: 50px;
+  animation-name: conteudo;
+  animation-duration: 2s;
+}
+
+.conteudo {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  padding-top: 60px;
+  transition: 1s;
+}
+
+.conteudo:hover {
+  opacity: 0.9;
+  transition: 1s;
+}
+
+.conteudo-texto {
+  text-align: center;
+}
+
+.conteudo-texto h1 {
+  font-size: 16px;
+  color: #f27609;
+  text-transform: uppercase;
+  margin-top: 0px;
+}
+
+.conteudo-texto h2 {
+  text-transform: none;
+  font-weight: 100;
+  margin-top: 0;
+}
+
+/* ------------------------------------- Esteliza a pagina de FOTOGRAFIAS -------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+
+.editar-imagem3 {
+  /* -webkit-mask-image: linear-gradient(to top, transparent 25%, black 100%); */
+  height: 1561px;
+  position: absolute;
+  width: 100%;
+  background-position: center;
+  background: url(../img/planodefundo.png);
+  background-size: cover;
+  margin-top: -79px;
+}
+
+.editar-imagem3:after {
+  background: none repeat scroll 0 0 #000;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.imagem {
+  width: 21rem;
+  height: 19rem;
+  overflow: hidden;
+  position: relative;
+  margin-left: -43px;
+}
+
+.editor {
+  border-radius: 14px;
+  height: 243px;
+  width: 100%;
+  cursor: pointer;
+  margin-left: -9px;
+  margin-top: 15px;
+  transition: transform 400ms;
+}
+
+.editor:hover {
+  transform: scale(1.2);
+}
+
+#modelo_img {
+  width: 782px;
+  height: 502px;
+  margin-top: -328px;
+}
+
+.modelo_ativo #modelo_img {
+  transform: scale(1);
+}
+
+.zoom {
+  width: 101vw;
+  position: fixed;
+  visibility: hidden;
+  z-index: 1;
+  margin: 58px;
+  margin-block: 43px;
+}
+
+.modelo_ativo {
+  visibility: visible;
+  opacity: 1;
+}
+
+.fundo_escuro:after {
+  background: none repeat scroll 0 0 #000;
+  content: "";
+  margin-left: -82px;
+  margin-top: -452px;
+  margin-bottom: 91px;
+  height: 1023px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.modelo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#frase h2 {
+  font-size: 12px;
+  color: #f4f6fd;
+  text-align: center;
+
+  animation-name: navegacao;
+  animation-duration: 4s;
+}
+
+.zoom,
+img {
+  display: inline-block;
+}
+
+#voltar {
+  height: 126px;
+  width: 130px;
+  cursor: pointer;
+  margin-left: -156px;
+  margin-top: -452px;
+  position: relative;
+  font-size: 150px;
+}
+
+#voltar:hover {
+  color: #8e8e8e;
+}
+
+#proximo {
+  height: 126px;
+  width: 130px;
+  cursor: pointer;
+  margin-left: -9px;
+  margin-top: -452px;
+  position: relative;
+  font-size: 150px;
+}
+
+#proximo:hover {
+  color: #8e8e8e;
+}
+
+#fechar {
+  color: #fff;
+  position: absolute;
+  top: -345px;
+  right: 8%;
+  padding: 6px 13px;
+  cursor: pointer;
+  font-size: 25px;
+}
+#fechar:hover {
+  background-color: rgb(27, 27, 27);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.modelo_ativo {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modelo_ativo #modelo {
+  transform: scale(1);
+}
+
+#main .botao_voltar {
+  margin-top: 12px;
+}
+
+.botao_voltar {
+  color: #838383;
+  font-size: 14px;
+  position: relative;
+  border: 1px solid #696969;
+  background: #000000;
+  padding: 6px;
+  border-radius: 102px;
+}
+
+.botao_voltar:hover {
+  color: white;
+  font-size: 14px;
+  position: relative;
+  border: 1px solid #e7e7e7;
+}
+#Botao {
+  text-align-last: center;
+}
+.botao_voltar2 {
+  color: #838383;
+  font-size: 14px;
+  position: relative;
+  border: 1px solid #696969;
+  background: #000000;
+  padding: 6px;
+  border-radius: 102px;
+}
+
+.botao_voltar2:hover {
+  color: white;
+  font-size: 14px;
+  position: relative;
+  border: 1px solid #e7e7e7;
+}
+/* ------------------------------------- Esteliza a pagina de Curriculo -------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+
+#main2 {
+  animation-name: conteudo;
+  animation-duration: 2s;
+}
+
+#main2 .editar-imagem4 {
+  height: 2214px;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  background-position: center;
+  background: url(../img/planodefundo.png);
+  margin-top: -2px;
+}
+
+.editar-imagem4:after {
+  background: none repeat scroll 0 0 #000;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.9;
+  position: absolute;
+  width: 100%;
+}
+
+#formulario img {
+  float: left;
+  width: 250px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 12px;
+  position: relative;
+  border-radius: 30px;
+}
+
+#main2 h1 {
+  animation-name: conteudo;
+  animation-duration: 2s;
+  padding: 52px;
+}
+
+.titulo_perfil3 h1 {
+  color: #e6e6e6;
+  font-weight: normal;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 2px;
+  margin-left: 12px;
+  position: relative;
+  animation: go-back 1s infinite alternate;
+  text-transform: uppercase;
+}
+
+.titulo_perfil3 span {
+  color: #f27609;
+  font-size: 50px;
+  animation-name: conteudo;
+  animation-duration: 2s;
+}
+
+#formulario h2 {
+  margin: 22px;
+  color: #f27609;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+  position: relative;
+  margin-block-end: -2px;
+}
+
+#formulario h3 {
+  margin: 20px;
+  color: #f27609;
+  font-size: 15px;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: normal;
+}
+
+#formulario p {
+  margin: 24px;
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 24px;
+  text-align: justify;
+  position: relative;
+}
+
+hr {
+  display: block;
+  border-style: inset;
+  border-width: 1px;
+  position: relative;
+}
+
+/* ------------------------------------- Esteliza a pagina de Contato -------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------------------------*/
+
+#main2 .editar-imagem5 {
+  height: 740px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  background-position: center;
+  background: url(../img/planodefundo.png);
+  margin-right: 44px;
+  background-size: cover;
+  margin-block: 164px;
+  margin-top: -2px;
+}
+
+.editar-imagem5:after {
+  background: none repeat scroll 0 0 #000;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.9;
+  position: absolute;
+  width: 100%;
+}
+
+.social-img {
+  text-align-last: center;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.social_icones3 i {
+  font-size: 30px;
+  position: relative;
+  margin-left: 18px;
+  color: #fff;
+}
+
+.social_icones3 i:hover {
+  background: #f27609;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 30px;
+}
+
+/* Esteliza a area do rodapé da primeira pagina*/
+#footer {
+  padding: 15px;
+  color: #f4f6fd;
+  font-size: 13px;
+  width: 100%;
+  background: #000000;
+  margin-top: 45px;
+}
+
+#footer .copyright {
+  text-align: center;
+  font-size: 12px;
+}
+
+#footer .creditos {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 11px;
+  color: #eaebf0;
+}
+
+#footer a {
+  font-size: 12px;
+  color: #f27609;
+}
+
+#footermobile {
+  padding: 15px;
+  color: #f4f6fd;
+  font-size: 14px;
+  text-align-last: center;
+  width: 100%;
+  background: #000000;
+  display: none;
+}
+
+#footer .copyrightmobile {
+  text-align: center;
+  font-size: 12px;
+  display: none;
+}
+
+#footer .creditosmobile {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 11px;
+  color: #eaebf0;
+  display: none;
+}
+
+/* Esteliza a area do rodapé da segunda pagina em diante*/
+
+.footer2 {
+  background: none repeat scroll 0 0 #232020;
+  color: rgb(174 174 174);
+  text-align: center;
+  position: relative;
+  margin-top: 54px;
+  height: 77px;
+  padding-block-start: 1px;
+  margin-block-end: 13px;
+  font-size: 12px;
+  margin-right: -8px;
+  width: 100%;
+}
+
+/* Esteliza o texto da MARCA no rodapé da pagina*/
+
+.footer-texto span {
+  color: white;
+  position: relative;
+}
+
+.footer-texto h2 {
+  color: #f27609;
+  font-weight: 200;
+  text-align: center;
+  position: relative;
+}
+
+/* Esteliza os logos sociais no rodapé da pagina*/
+
+.area-rodape {
+  background: none repeat scroll 0 0 #000;
+  color: white;
+  padding: 5px 0 5px;
+  font-size: 11px;
+  margin-right: -8px;
+  width: 100%;
+  margin-top: -6px;
+}
+
+.social_icones2 a {
+  font-size: 24px;
+  display: inline-block;
+  background: #000000;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 39px;
+  height: 36px;
+  transition: 0.3s;
+  margin-left: 4px;
+  margin-top: -31px;
+  position: relative;
+}
+
+.social_icones2 {
+  animation-name: conteudo;
+  animation-duration: 2s;
+  margin-top: 25px;
+}
+
+.social_icones2 a:hover {
+  background: #f27609;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* adicionando animação nas paginas */
+
+@keyframes navegacao {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes conteudo {
+  0% {
+    opacity: 0;
+    transform: translate(-20px, 0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes titulo-capa {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes perfil-capa {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes animacao {
+  0% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Responsivo da PAGINA INICIO */
+
+@media screen and (max-width: 1000px) {
+  .perfil {
+    width: 100%;
+  }
+
+
+  #cabecalho {
+    position: relative;
+    z-index: 9997;
+    transition: all 0.5s;
+    width: 100%;
+  }
+
+  #cabecalho .perfil img {
+    width: 175px;
+  }
+
+  #cabecalho .perfil h1 a {
+    font-size: 35px;
+  }
+
+  .menu {
+    animation: none;
+  }
+
+  .menu * {
+    font-size: 20px;
+  }
+
+  .menu * li {
+    display: none;
+  }
+
+  .menu *.icone {
+    display: inline-block;
+    border-bottom: none;
+  }
+
+  .menujs {
+    height: auto;
+  }
+
+  .menujs ul {
+    height: auto;
+    margin-top: -18px;
+    padding-right: 15%;
+    padding-left: 12%;
+  }
+  .menujs a,
+  .menujs a:focus {
+    display: inline-block;
+    line-height: 2;
+    font-size: 15px;
+  }
+
+  .menu a i,
+  .menu a:focus i {
+    font-size: 15px;
+  }
+
+  .menujs li {
+    margin-bottom: 6px;
+    line-height: 2;
+    width: 100%;
+    font-weight: 100;
+    display: block;
+    border-bottom: solid rgb(49, 49, 49) 1px;
+    height: 56px;
+  }
+
+  .titulo_perfil {
+    margin-left: -286px;
+  }
+  .titulo_perfil {
+    position: relative;
+    z-index: 9;
+    padding: 30px;
+  }
+
+  .titulo_perfil h1 {
+    margin-top: 140px;
+    font-size: 26px;
+    margin-left: 280px;
+  }
+
+  #capa span {
+    font-size: 55px;
+    margin-left: -20px;
+    margin-top: 2px;
+    text-align-last: center;
+  }
+
+  .titulo_perfil h2 {
+    margin-top: 71px;
+    font-size: 20px;
+    text-align-last: center;
+  }
+
+  #footer {
+    display: none;
+  }
+
+  #footermobile {
+    display: inline-block;
+  }
+
+  #footer .copyright {
+    display: none;
+  }
+
+  #footer .copyrightmobile {
+    display: inline-block;
+  }
+
+  #footer .creditos {
+    display: none;
+  }
+  #footer .creditosmobile {
+    display: none;
+  }
+  #footermobile a {
+    font-size: 12px;
+    color: #f27609;
+  }
+
+  /* Responsivo do MENU SECUNDARIO */
+  .menu_secundario {
+    animation: none;
+  }
+
+  .menu_secundario li {
+    display: none;
+  }
+
+  .menu_secundario li.icon {
+    display: inline-block;
+    border-bottom: none;
+  }
+
+  .menu_secundariojs {
+    height: auto;
+  }
+
+  .menu_secundariojs ul {
+    height: auto;
+    padding-right: 15%;
+    padding-left: 12%;
+  }
+
+  .menu_secundariojs li {
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    border-bottom: solid rgb(58, 58, 58) 1px;
+  }
+
+  /* Responsivo da PAGINA PORTFÓLIO */
+  .titulo_perfil2 {
+    position: relative;
+    z-index: 9;
+  }
+
+  #main .container {
+    display: inline-block;
+  }
+
+  #main h1 {
+    font-size: 23px;
+  }
+
+  .titulo_perfil2 span {
+    color: #f27609;
+    font-size: 32px;
+  }
+
+  .editar-imagem2 {
+    height: 920px;
+  }
+
+  .imagem1 {
+    margin-top: 43px;
+    width: 333px;
+    height: 312px;
+    margin-left: 7px;
+  }
+
+  .imagem2 {
+    margin-top: 8px;
+    width: 333px;
+    height: 312px;
+  }
+
+  .botao_voltar {
+    font-size: 15px;
+  }
+  .botao_voltar:hover {
+    font-size: 15px;
+  }
+
+  .conteudo {
+    padding-top: 1px;
+  }
+
+  #main h2 {
+    font-size: 12px;
+    margin-top: 50px;
+  }
+
+  #main h3 {
+    font-size: 12px;
+  }
+
+  .footer-texto p {
+    font-size: 11px;
+  }
+
+  .footer-texto h2 span {
+    font-size: 14px;
+  }
+
+  .area-rodape a {
+    font-size: 11px;
+  }
+
+  .area-rodape p {
+    font-size: 11px;
+  }
+
+  .social_icones2 a {
+    font-size: 15px;
+    margin-left: -5px;
+  }
+
+  .social_icones2 {
+    margin-top: 35px;
+    animation: none;
+  }
+
+  /* Responsivo da PAGINA FOTOGRAFIAS */
+  #frase h2 {
+    font-size: 8px;
+    line-height: 2;
+    animation: none;
+  }
+
+  .editar-imagem3 {
+    height: 820px;
+  }
+
+  .imagem {
+    width: 160px;
+    height: 136px;
+    margin-left: -46px;
+    margin-top: -23px;
+  }
+
+  .galeria {
+    height: 545px;
+  }
+
+  .editor {
+    height: 97px;
+    width: 100%;
+    margin-left: 18px;
+  }
+
+  .zoom {
+    width: 100%;
+    margin-left: 79px;
+    position: absolute;
+  }
+
+  #modelo_img {
+    height: 278px;
+    width: 282px;
+    margin-top: -2px;
+    margin-left: -15px;
+  }
+
+  #fechar {
+    font-size: 30px;
+    top: -275px;
+    right: -43px;
+    position: relative;
+  }
+
+  #voltar {
+    height: 15px;
+    margin: -31px;
+    margin-left: -157px;
+    margin-top: -161px;
+    font-size: 100px;
+  }
+
+  #proximo {
+    margin-left: -46px;
+    margin-top: -17px;
+    font-size: 100px;
+  }
+
+  .fundo_escuro:after {
+    margin-left: -79px;
+    margin-top: -311px;
+  }
+
+  /* Responsivo da PAGINA CURRÍCULO */
+
+  #formulario img {
+    width: 246px;
+    margin-right: -7px;
+    margin-bottom: -1px;
+    margin-left: -9px;
+    margin-top: 25px;
+  }
+
+  .titulo_perfil3 h1 {
+    font-size: 17px;
+    margin-left: -6px;
+  }
+
+  .titulo_perfil3 span {
+    font-size: 27px;
+  }
+
+  #formulario h3 {
+    font-size: 14px;
+  }
+
+  #formulario p {
+    margin: 22px;
+    color: white;
+    font-size: 13px;
+    text-align: justify;
+    position: relative;
+  }
+
+  .botao_voltar2 {
+    font-size: 12px;
+  }
+
+  .botao_voltar2:hover {
+    font-size: 12px;
+  }
+}

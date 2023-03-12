@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+        <!-- Configuração do media query-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+        <title>curriculo</title>
+
+        <!-- Estilos-->
+        <link rel="stylesheet" href="css/estilo.css">
+
+        <!-- Scripts-->
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </head>
+
+</head>
+
+<body>
+    <nav id="menu_secundario" class="menu_secundario">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-bars"></i><span> Inicio</span></a></li>
+            <li><a href="portfolio.html"><i class="fa fa-book"></i><span> Portfólio</span></a></li>
+            <li><a href="fotografia.html"><i class="fa fa-camera-retro"></i><span> Fotografias</span></a>
+            </li>
+            <li><a href="curriculo.html"><i class="fa fa-envelope"></i><span> Currículo</span></a></li>
+            <li><a href="contato.html" class="ativo"><i class="fa fa-user"></i><span> Contato</span></a></li>
+            <li class="icon" id="icon" onclick="openNav()" style='font-size:37px;'>&#9776;</li>
+        </ul>
+    </nav>
+
+    <section id="main2">
+
+        <div class="editar-imagem5"></div>
+        <div class="titulo_perfil3">
+            <h1>Meu <span> Contato</span></h1>
+        </div>
+        <hr>
+        <article id="formulario">
+
+            <h3>E-mail:</h3>
+            <p>wsanttossttreett@hotmail.com</p>
+            <p>wsanttossttreett@outlook.com.br</p>
+
+            <h3>Telefone:</h3>
+            <p>(38) 99927-2911</p>
+
+            <h3>Linkedin:</h3>
+            <p><a href="https://br.linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a></p>
+
+            <h3>Redes Sociais:</h3>
+            <div class="social_icones3">
+                <a href="https://www.whatsapp.com/?lang=pt_br" target="whatsapp"><i class="fa fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/wendlley.santtos.7/" target="facebook"><i
+                        class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/wendlley.santtos/" class="instagram"><i
+                        class="fa fa-instagram"></i></a>
+                <a href="https://mobile.twitter.com/Toneshifterzs/" target="twitter"><i class="fa fa-twitter"></i></a>
+
+            </div>
+        </article>
+    </section>
+    <br>
+    <br>
+    <div id="Botao">
+        <a class="botao_voltar2" href="index.html">&larr; Voltar ao início<a>
+    </div>
+
+
+
+    <footer>
+        <div class="footer2">
+            <div class="footer-texto">
+                <h2>DESENVOLVEDOR<span> WEB</span></h2>
+                <p>" Acredito que tudo seja um desafio que pode ser descoberto. "
+                </p>
+            </div>
+            <div class="area-rodape">
+                <p>&copy; 2023. Todos os direitos reservados. Codificado por
+                    <a href="index.html" target="_blank"><i class="fa fa-hashtag"></i>Wendley Santos</a>
+                </p>
+                <div class="social_icones2">
+                    <a href="https://www.google.com.br" target="Google"><i class="fa fa-google"></i></a>
+                    <a href="https://www.facebook.com/wendlley.santtos.7/" target="facebook"><i
+                            class="fa fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/wendlley.santtos/" class="instagram"><i
+                            class="fa fa-instagram"></i></a>
+                    <a href="https://mobile.twitter.com/Toneshifterzs/" target="twitter"><i
+                            class="fa fa-twitter"></i></a>
+                    <a href="https://br.linkedin.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function openNav() {
+
+            var x = document.getElementById("menu_secundario");
+
+            if (x.className === "menu_secundario") {
+                x.className += " menu_secundariojs";
+                document.getElementById("icon").innerHTML = "&Cross;";
+
+            } else {
+                x.className = "menu_secundario";
+                document.getElementById("icon").innerHTML = "&#9776;";
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
