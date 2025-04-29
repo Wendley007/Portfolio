@@ -130,10 +130,9 @@ export default function Footer() {
   }, [index]);
 
   return (
-    <footer className="relative py-12 md:py-16 px-4 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 overflow-hidden">
+    <footer className="relative py-12 sm:py-16 px-4 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:20px_20px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
-
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/60 to-white dark:via-black/60 dark:to-black" />
 
       <div className="relative max-w-7xl mx-auto">
@@ -250,7 +249,10 @@ export default function Footer() {
           </motion.div>
 
           {/* Seção 4: Redes Sociais */}
-          <motion.div variants={itemVariants} className="space-y-4">
+          <motion.div
+            variants={itemVariants}
+            className="space-y-4 hidden md:block"
+          >
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 relative inline-block">
               Redes Sociais
               <motion.span

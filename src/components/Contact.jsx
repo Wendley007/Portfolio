@@ -106,10 +106,7 @@ export default function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="relative min-h-screen py-20 px-6 overflow-hidden"
-    >
+    <section id="contact" className="relative py-20 px-6 overflow-hidden">
       {/* Fundo com gradientes e texturas */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:10px_10px]"></div>
       <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/40 to-white dark:via-black/40 dark:to-black" />
