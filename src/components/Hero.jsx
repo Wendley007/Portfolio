@@ -50,13 +50,13 @@ export default function Hero() {
 
       {/* Imagem de fundo para desktop */}
       <div
-        className="absolute inset-0 hidden md:block bg-cover bg-center"
+        className="absolute inset-0 hidden sm:block bg-cover bg-center"
         style={{ backgroundImage: `url(${perfil})` }}
       ></div>
 
       {/* Imagem e camada escura para mobile */}
       <div
-        className="absolute inset-0 opacity-75 bg-gray-900 block md:hidden bg-cover bg-center"
+        className="absolute inset-0 opacity-75 bg-gray-900 block lg:hidden bg-cover bg-center"
         style={{ backgroundImage: `url(${perfilMobile})` }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>

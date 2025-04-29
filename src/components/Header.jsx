@@ -128,7 +128,7 @@ const Header = () => {
           variants={menuIconVariants}
           animate={isMenuOpen ? "open" : "closed"}
           transition={{ duration: 0.3 }}
-          className="lg:hidden flex items-center justify-center p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          className="md:hidden flex items-center justify-center p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
           aria-expanded={isMenuOpen}
@@ -150,7 +150,7 @@ const Header = () => {
             </motion.div>
           </AnimatePresence>
         </motion.button>
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8">
           {links.map(({ id, label }) => {
             const isActive = activeLink === id;
 

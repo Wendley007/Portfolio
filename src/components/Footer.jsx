@@ -379,7 +379,7 @@ export default function Footer() {
         }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-700 dark:from-purple-800 dark:to-pink-900 text-white shadow-xl backdrop-blur-md bg-opacity-60 transition-all duration-300 ease-in-out
+        className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-700 dark:from-purple-800 dark:to-pink-900 text-white shadow-xl backdrop-blur-md bg-opacity-60 transition-all duration-300 ease-in-out
     hover:scale-110 hover:shadow-2xl hover:from-purple-700 hover:to-pink-800
     dark:hover:from-purple-900 dark:hover:to-pink-950
     focus:outline-none focus:ring-4 focus:ring-purple-400 focus:ring-offset-2 dark:focus:ring-purple-900 dark:focus:ring-offset-gray-800"

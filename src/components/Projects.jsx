@@ -30,7 +30,7 @@ const projects = [
     description:
       "Projeto acadêmico desenvolvido com HTML, CSS e JavaScript puro, com foco em estruturação de conteúdo, responsividade e design limpo.",
     image: projeto2,
-    link: "https://wendley007.github.io/Portfolio/index.html",
+    link: "https://trabalho-academico-portfolio.vercel.app/",
     github: "https://github.com/Wendley007/Portfolio.git",
     techs: ["HTML", "CSS", "JavaScript"],
     date: "2023",
