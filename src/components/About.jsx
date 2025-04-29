@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import perfil2 from "../assets/perfil2.jpg";
 import {
   Code2,
   Briefcase,
@@ -131,7 +132,7 @@ export default function About() {
             <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl opacity-20 blur-lg group-hover:opacity-30 transition-opacity duration-300" />
             <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto lg:mx-0 rounded-2xl overflow-hidden">
               <img
-                src="/src/assets/perfil2.jpg"
+                src={perfil2}
                 alt="Foto de perfil do desenvolvedor Wendley"
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
               />

@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import projeto1 from "../assets/projeto1.png";
+import projeto2 from "../assets/projeto2.png";
 import {
   ExternalLink,
   Github,
@@ -15,8 +17,8 @@ const projects = [
     title: "Catálogo Web",
     description:
       "Sistema completo para gestão de feiras livres, com cadastro de feirantes, produtos e categorias.",
-    image: "/src/assets/projeto1.png",
-    link: "https://cat-logo-web.vercel.app/",
+    image: projeto1,
+    link: "https://feiralivre.vercel.app/",
     github: "https://github.com/Wendley007/Cat-logoWeb.git",
     techs: ["React", "Firebase", "Tailwind CSS", "JavaScript"],
     date: "2024",
@@ -27,7 +29,7 @@ const projects = [
     title: "Portfólio",
     description:
       "Projeto acadêmico desenvolvido com HTML, CSS e JavaScript puro, com foco em estruturação de conteúdo, responsividade e design limpo.",
-    image: "/src/assets/projeto2.png",
+    image: projeto2,
     link: "https://wendley007.github.io/Portfolio/index.html",
     github: "https://github.com/Wendley007/Portfolio.git",
     techs: ["HTML", "CSS", "JavaScript"],
