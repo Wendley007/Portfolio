@@ -44,7 +44,7 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: Github,
-    url: "https://github.com/",
+    url: "https://github.com/Wendley007",
     color: "hover:text-gray-600 dark:hover:text-gray-400",
     hoverColor: "#333",
   },
