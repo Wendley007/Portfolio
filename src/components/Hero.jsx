@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen text-white"
+      className="relative min-h-screen text-white overflow-x-hidden"
       style={{
         backgroundImage: `url(${perfil})`,
         backgroundSize: "cover",
