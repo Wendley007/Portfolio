@@ -51,7 +51,7 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://linkedin.com/in/",
+    url: "https://www.linkedin.com/in/wendley-santos-248159219/",
     color: "hover:text-blue-500 dark:hover:text-blue-400",
     hoverColor: "#0077B5",
   },

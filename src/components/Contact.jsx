@@ -29,7 +29,7 @@ const contactInfo = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "wendley-santos",
-    href: "https://www.linkedin.com/in/wendley-santos-248159219",
+    href: "https://www.linkedin.com/in/wendley-santos-248159219/",
   },
   {
     icon: Github,

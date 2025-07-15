@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import projeto1 from "../assets/projeto1.png";
-import projeto2 from "../assets/projeto2.png";
+import projeto1 from "../assets/projeto1.webp";
+import projeto2 from "../assets/projeto2.webp";
 import {
   ExternalLink,
   Github,
@@ -31,9 +31,9 @@ const projects = [
       "Projeto acadêmico desenvolvido com HTML, CSS e JavaScript puro, com foco em estruturação de conteúdo, responsividade e design limpo.",
     image: projeto2,
     link: "https://trabalho-academico-portfolio.vercel.app/",
-    github: "https://github.com/Wendley007/Portfolio.git",
+    github: "https://github.com/Wendley007/Trabalho-Academico-Portfolio",
     techs: ["HTML", "CSS", "JavaScript"],
-    date: "2023",
+    date: "2022",
     role: "Front-end Developer",
     teamSize: "Individual",
   },
@@ -130,6 +130,9 @@ export default function Projects() {
                     <img
                       src={project.image}
                       alt={project.title}
+                      loading="lazy"
+                      width="600"
+                      height="400"
                       className="w-full h-full object-cover transform transition duration-700 group-hover:scale-110"
                     />
                     {/* Gradiente escuro sobre a imagem no hover */}

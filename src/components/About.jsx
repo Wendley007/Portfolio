@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import perfil2 from "../assets/perfil2.jpg";
+import perfil2 from "../assets/perfil2.webp";
 import {
   Code2,
   Briefcase,

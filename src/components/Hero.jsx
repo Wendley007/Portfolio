@@ -2,20 +2,20 @@ import React, { useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import ThunderCanvas from "./ThunderCanvas";
-import perfil from "../assets/profile.jpg";
-import perfilMobile from "../assets/perfilMobile.jpg";
+import perfil from "../assets/profile.webp";
+import perfilMobile from "../assets/perfilMobile.webp";
 import { FaRocket, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
   const [typing, setTyping] = useState(true);
   const [showRole, setShowRole] = useState(false);
   const [lettersPositions, setLettersPositions] = useState([]);
+
   const handleTypewriterDone = useCallback(() => {
     setTyping(false);
     setTimeout(() => setShowRole(true), 1000);
   }, []);
 
-  // Atualiza posições das letras com base no tamanho da tela
   const updateLettersPositions = useCallback(() => {
     const positions = Array.from({ length: 16 }, (_, i) => ({
       x: window.innerWidth / 2 + i * 20,
@@ -24,7 +24,6 @@ export default function Hero() {
     setLettersPositions(positions);
   }, []);
 
-  // Atualiza as posições sempre que a tela for redimensionada
   useEffect(() => {
     updateLettersPositions();
     window.addEventListener("resize", updateLettersPositions);
@@ -35,42 +34,40 @@ export default function Hero() {
     <section
       id="home"
       className="relative min-h-screen text-white overflow-x-hidden"
-      style={{
-        backgroundImage: `url(${perfil})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
-      <div className="absolute inset-0 opacity-10">
+      {/* Imagem de fundo com prioridade */}
+      <img
+        src={perfil}
+        alt="Fundo com foto do Wendley"
+        loading="eager"
+        fetchpriority="high"
+        className="absolute inset-0 w-full h-full object-cover z-0 hidden sm:block"
+      />
+      <img
+        src={perfilMobile}
+        alt="Fundo mobile"
+        loading="eager"
+        fetchpriority="high"
+        className="absolute inset-0 w-full h-full object-cover z-0 block sm:hidden"
+      />
+
+      {/* Grade decorativa */}
+      <div className="absolute inset-0 opacity-10 z-10">
         <div className="absolute inset-0 bg-grid-pattern"></div>
       </div>
 
-      {/* Gradiente escuro sobre a imagem para dar contraste ao texto */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
+      {/* Gradiente escuro para contraste */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent z-20"></div>
 
-      {/* Imagem de fundo para desktop */}
-      <div
-        className="absolute inset-0 hidden sm:block bg-cover bg-center"
-        style={{ backgroundImage: `url(${perfil})` }}
-      ></div>
-
-      {/* Imagem e camada escura para mobile */}
-      <div
-        className="absolute inset-0 opacity-75 bg-gray-900 block lg:hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${perfilMobile})` }}
-      >
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-      </div>
-
-      {/* Conteúdo principal do Hero */}
-      <div className="relative z-10 container mx-auto px-6 flex items-center min-h-screen">
+      {/* Conteúdo principal */}
+      <div className="relative z-30 container mx-auto px-6 flex items-center min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl"
         >
-          {/* Frase inicial com efeito de digitação */}
+          {/* Nome digitando */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -96,11 +93,10 @@ export default function Hero() {
             </h3>
           </motion.div>
 
-          {/* Mostrar o cargo após o nome ser digitado */}
+          {/* Cargo: Desenvolvedor Web */}
           <AnimatePresence>
             {showRole && (
               <>
-                {/* Efeito visual com letras animadas */}
                 <ThunderCanvas lettersPositions={lettersPositions} />
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -127,7 +123,7 @@ export default function Hero() {
             )}
           </AnimatePresence>
 
-          {/* Pequena descrição sobre o que você faz */}
+          {/* Descrição */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -138,42 +134,33 @@ export default function Hero() {
             modernas, focando em experiências únicas e memoráveis.
           </motion.p>
 
-          {/* Botões de ação */}
+          {/* Botões */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="mt-8 flex flex-wrap gap-4"
+            className="mt-10 flex flex-wrap gap-6"
           >
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="mt-10 flex flex-wrap gap-6"
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="#projects"
+              className="relative group inline-flex items-center justify-center px-4 py-2 rounded-xl text-white font-semibold bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 shadow-xl overflow-hidden transition-all duration-300"
             >
-              {/* Botão para navegar até a seção de projetos */}
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="#projects"
-                className="relative group inline-flex items-center justify-center px-2 py-2 rounded-xl text-white font-semibold bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 shadow-xl overflow-hidden transition-all duration-300"
-              >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/20 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-                <FaRocket className="mr-2 text-white" />
-                Ver Projetos
-              </motion.a>
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/20 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+              <FaRocket className="mr-2 text-white" />
+              Ver Projetos
+            </motion.a>
 
-              {/* Botão para navegar até a seção de contato */}
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="#contact"
-                className="inline-flex items-center justify-center px-2 py-2 rounded-xl text-white font-semibold bg-white/10 backdrop-blur-md border border-white/20 hover:border-purple-400 shadow-md transition-all duration-300"
-              >
-                <FaEnvelope className="mr-2" />
-                Contato
-              </motion.a>
-            </motion.div>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="#contact"
+              className="inline-flex items-center justify-center px-4 py-2 rounded-xl text-white font-semibold bg-white/10 backdrop-blur-md border border-white/20 hover:border-purple-400 shadow-md transition-all duration-300"
+            >
+              <FaEnvelope className="mr-2" />
+              Contato
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>
