@@ -16,13 +16,10 @@ export default defineConfig({
     port: 3000, // Pode mudar se quiser
     open: true, // Abre o navegador automaticamente
   },
+
   build: {
     outDir: "dist",
     assetsDir: "assets",
     sourcemap: false,
-  },
-
-  esbuild: {
-    target: "esnext",
   },
 });
