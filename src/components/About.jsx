@@ -163,7 +163,7 @@ export default function About() {
                     Formação Acadêmica
                   </h3>
                   <p className="text-gray-700 text-sm dark:text-gray-300">
-                    Cursando o bacharelado em{" "}
+                    Cursando bacharelado em{" "}
                     <span className="font-semibold text-purple-600 dark:text-purple-400">
                       Sistemas de Informação
                     </span>{" "}

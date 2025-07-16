@@ -32,7 +32,6 @@ const certificates = [
       "PHP",
       "MySQL",
       "JQuery",
-      "WordPress",
       "Git",
       "GitHub",
     ],

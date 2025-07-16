@@ -104,7 +104,7 @@ export default function Hero() {
                   transition={{ duration: 0.6 }}
                   className="mb-8"
                 >
-                  <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold bg-gradient-to-r from-white via-red-500 to-purple-600 bg-clip-text text-transparent">
+                  <h1 className="font-sans text-4xl sm:text-6xl md:text-7xl font-bold bg-gradient-to-r from-white via-red-500 to-purple-600 bg-clip-text text-transparent">
                     <Typewriter
                       onInit={(typewriter) => {
                         typewriter.typeString("Desenvolvedor Web").start();
@@ -128,7 +128,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-gray-300 text-lg sm:text-xl leading-relaxed max-w-2xl"
+            className="font-sans text-gray-300 text-sm sm:text-xl leading-relaxed max-w-2xl"
           >
             Criando interfaces responsivas e funcionais com tecnologias
             modernas, focando em experiências únicas e memoráveis.
