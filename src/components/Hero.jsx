@@ -124,15 +124,10 @@ export default function Hero() {
           </AnimatePresence>
 
           {/* Descrição */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="font-sans text-gray-300 text-sm sm:text-xl leading-relaxed max-w-2xl"
-          >
+          <p className=" text-gray-300 text-sm sm:text-xl leading-relaxed max-w-2xl">
             Criando interfaces responsivas e funcionais com tecnologias
             modernas, focando em experiências únicas e memoráveis.
-          </motion.p>
+          </p>
 
           {/* Botões */}
           <motion.div

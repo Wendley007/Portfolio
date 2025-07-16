@@ -239,7 +239,7 @@ export default function About() {
                         <h4 className="font-medium text-gray-900 dark:text-white break-words">
                           {tech.name}
                         </h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 break-words">
+                        <p className="text-sm text-gray-600 mt-1 dark:text-gray-400 break-words">
                           {tech.description}
                         </p>
                       </div>
