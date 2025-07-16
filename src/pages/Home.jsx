@@ -3,11 +3,14 @@ import Hero from "../components/Hero";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-// Importações com lazy
 const About = lazy(() => import("../components/About"));
 const Projects = lazy(() => import("../components/Projects"));
 const Certificates = lazy(() => import("../components/Certificates"));
 const Contact = lazy(() => import("../components/Contact"));
+
+const LoadingSection = ({ message }) => (
+  <div className="text-center py-10 text-gray-500">{message}</div>
+);
 
 export default function Home() {
   return (
@@ -16,41 +19,25 @@ export default function Home() {
       <Hero />
 
       <Suspense
-        fallback={
-          <div className="text-center py-10 text-gray-500">
-            Carregando seção sobre...
-          </div>
-        }
+        fallback={<LoadingSection message="Carregando seção sobre..." />}
       >
         <About />
       </Suspense>
 
       <Suspense
-        fallback={
-          <div className="text-center py-10 text-gray-500">
-            Carregando seção projetos...
-          </div>
-        }
+        fallback={<LoadingSection message="Carregando seção projetos..." />}
       >
         <Projects />
       </Suspense>
 
       <Suspense
-        fallback={
-          <div className="text-center py-10 text-gray-500">
-            Carregando seção certificados...
-          </div>
-        }
+        fallback={<LoadingSection message="Carregando seção certificados..." />}
       >
         <Certificates />
       </Suspense>
 
       <Suspense
-        fallback={
-          <div className="text-center py-10 text-gray-500">
-            Carregando seção contato...
-          </div>
-        }
+        fallback={<LoadingSection message="Carregando seção contato..." />}
       >
         <Contact />
       </Suspense>

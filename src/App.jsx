@@ -9,38 +9,41 @@ function App() {
         <title>Wendley.dev | Portfólio</title>
         <meta
           name="description"
-          content="Portfólio de Wendley, desenvolvedor web focado em criar interfaces modernas, responsivas e experiências memoráveis."
+          content="Portfólio de Wendley, desenvolvedor web focado em criar interfaces modernas, responsivas e experiências memoráveis com React, Tailwind e JavaScript."
         />
         <meta name="author" content="Wendley Santos Ribeiro" />
-        <link rel="icon" href="/assets/code.png" type="image/png" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="keywords"
+          content="Wendley, portfólio, desenvolvedor web, React, Tailwind, front-end"
+        />
 
-        {/* SEO estruturado (JSON-LD) */}
+        {/* SEO estruturado com JSON-LD */}
         <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Wendley Santos Ribeiro",
-              "url": "https://wendleydev.vercel.app",
-              "image": "https://wendleydev.vercel.app/assets/perfil2.webp",
-              "sameAs": [
-                "https://www.linkedin.com/in/wendley-santos-248159219",
-                "https://github.com/Wendley007",
-                "https://wa.me/5538999272911"
-              ],
-              "jobTitle": "Desenvolvedor Web Front-end",
-              "worksFor": {
-                "@type": "Organization",
-                "name": "Freelancer"
-              },
-              "description": "Portfólio de Wendley, desenvolvedor web com foco em criar interfaces modernas, responsivas e experiências únicas com React, Tailwind e JavaScript.",
-              "email": "mailto:wsanttossttreett@gmail.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "BR"
-              }
-            }
-          `}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Wendley Santos Ribeiro",
+            url: "https://wendleydev.vercel.app",
+            image: "https://wendleydev.vercel.app/assets/perfil2.webp",
+            sameAs: [
+              "https://www.linkedin.com/in/wendley-santos-248159219",
+              "https://github.com/Wendley007",
+              "https://wa.me/5538999272911",
+            ],
+            jobTitle: "Desenvolvedor Web Front-end",
+            worksFor: {
+              "@type": "Organization",
+              name: "Freelancer",
+            },
+            description:
+              "Portfólio de Wendley, desenvolvedor web com foco em criar interfaces modernas, responsivas e experiências únicas com React, Tailwind e JavaScript.",
+            email: "mailto:wsanttossttreett@gmail.com",
+            address: {
+              "@type": "PostalAddress",
+              addressCountry: "BR",
+            },
+          })}
         </script>
       </Helmet>
 
