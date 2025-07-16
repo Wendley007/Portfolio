@@ -115,7 +115,7 @@ const Header = () => {
           whileTap={{ scale: 0.95 }}
           className="text-2xl font-bold cursor-pointer relative group"
         >
-          <span className="relative z-10 bg-gradient-to-r from-red-500 to-purple-600 bg-clip-text text-transparent">
+          <span className="relative z-10 -ml-2 bg-gradient-to-r from-red-500 to-purple-600 bg-clip-text text-transparent">
             Wendley.dev
           </span>
           <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-purple-600/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

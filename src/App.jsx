@@ -18,7 +18,38 @@ function App() {
           content="Wendley, portfólio, desenvolvedor web, React, Tailwind, front-end"
         />
 
-        {/* SEO estruturado com JSON-LD */}
+        <link
+          rel="preload"
+          href="/fonts/poppins/Poppins-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin="anonymous"
+        />
+        {/* Preload para Medium */}
+        <link
+          rel="preload"
+          href="/fonts/poppins/Poppins-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin="anonymous"
+        />
+        {/* Preload para SemiBold */}
+        <link
+          rel="preload"
+          href="/fonts/poppins/Poppins-SemiBold.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin="anonymous"
+        />
+        {/* Preload para Bold */}
+        <link
+          rel="preload"
+          href="/fonts/poppins/Poppins-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin="anonymous"
+        />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

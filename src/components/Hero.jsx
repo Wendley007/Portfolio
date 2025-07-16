@@ -7,13 +7,13 @@ import perfilMobile from "../assets/perfilMobile.webp";
 import { FaRocket, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
-  const [typing, setTyping] = useState(true);
+  const [typing, setTyping] = useState(false);
   const [showRole, setShowRole] = useState(false);
   const [lettersPositions, setLettersPositions] = useState([]);
 
   const handleTypewriterDone = useCallback(() => {
     setTyping(false);
-    setTimeout(() => setShowRole(true), 1000);
+    setTimeout(() => setShowRole(true), 500);
   }, []);
 
   const updateLettersPositions = useCallback(() => {
@@ -30,25 +30,34 @@ export default function Hero() {
     return () => window.removeEventListener("resize", updateLettersPositions);
   }, [updateLettersPositions]);
 
+  useEffect(() => {
+    // Delay para começar a animação depois que o conteúdo está estático no DOM
+    const timer = setTimeout(() => {
+      setTyping(true);
+    }, 1000); // 1 segundo para o LCP "engolir" o conteúdo estático
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section
       id="home"
       className="relative min-h-screen text-white overflow-x-hidden"
     >
-      {/* Imagem de fundo com prioridade */}
+      {/* Imagem de fundo com prioridade e otimização */}
       <img
         src={perfil}
         alt="Fundo com foto do Wendley"
         loading="eager"
         fetchpriority="high"
         className="absolute inset-0 w-full h-full object-cover z-0 hidden sm:block"
+        decoding="async"
       />
       <img
         src={perfilMobile}
         alt="Fundo mobile"
-        loading="eager"
-        fetchpriority="high"
+        loading="lazy"
         className="absolute inset-0 w-full h-full object-cover z-0 block sm:hidden"
+        decoding="async"
       />
 
       {/* Grade decorativa */}
@@ -60,38 +69,49 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent z-20"></div>
 
       {/* Conteúdo principal */}
-      <div className="relative z-30 container mx-auto px-6 flex items-center min-h-screen">
+      <div className="relative z-30 container mx-auto px-4 mt-4 flex items-center min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl"
         >
-          {/* Nome digitando */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="mb-6"
-          >
-            <h3 className="bg-gradient-to-r from-white text-transparent via-red-500 to-purple-600 bg-clip-text text-2xl sm:text-3xl font-semibold">
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString("Olá, sou Wendley...")
-                    .pauseFor(500)
-                    .callFunction(handleTypewriterDone)
-                    .start();
-                }}
-                options={{
-                  autoStart: true,
-                  loop: false,
-                  delay: 50,
-                  cursor: "|",
-                }}
-              />
-            </h3>
-          </motion.div>
+          {/* Texto estático para LCP */}
+          {!typing && (
+            <div className="mb-6">
+              <h3 className="bg-gradient-to-r from-white text-transparent via-red-500 to-purple-600 bg-clip-text text-2xl sm:text-3xl font-semibold">
+                Olá, sou Wendley...
+              </h3>
+            </div>
+          )}
+
+          {/* Nome digitando com Typewriter, só quando typing=true */}
+          {typing && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="mb-6"
+            >
+              <h3 className="bg-gradient-to-r from-white text-transparent via-red-500 to-purple-600 bg-clip-text text-2xl sm:text-3xl font-semibold">
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString("Olá, sou Wendley...")
+                      .pauseFor(500)
+                      .callFunction(handleTypewriterDone)
+                      .start();
+                  }}
+                  options={{
+                    autoStart: true,
+                    loop: false,
+                    delay: 50,
+                    cursor: "|",
+                  }}
+                />
+              </h3>
+            </motion.div>
+          )}
 
           {/* Cargo: Desenvolvedor Web */}
           <AnimatePresence>
@@ -124,7 +144,7 @@ export default function Hero() {
           </AnimatePresence>
 
           {/* Descrição */}
-          <p className=" text-gray-300 text-sm sm:text-xl leading-relaxed max-w-2xl">
+          <p className="text-gray-300 text-sm sm:text-xl leading-relaxed max-w-2xl">
             Criando interfaces responsivas e funcionais com tecnologias
             modernas, focando em experiências únicas e memoráveis.
           </p>
