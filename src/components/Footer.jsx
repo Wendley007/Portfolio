@@ -270,6 +270,7 @@ export default function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Acessar ${social.name} de Wendley`}
                   whileHover={{ x: 5, scale: 1.01 }}
                   transition={{ type: "spring", stiffness: 400 }}
                   className={`flex items-center text-gray-600 dark:text-gray-300 ${social.color} transition-colors`}
@@ -299,6 +300,7 @@ export default function Footer() {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Acessar ${social.name} de Wendley`}
               whileHover={{ y: -5, scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400 }}
