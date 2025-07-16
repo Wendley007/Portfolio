@@ -346,7 +346,7 @@ export default function Footer() {
             <span>
               &copy; {currentYear}{" "}
               <motion.a
-                href="#home"
+                href="https://www.linkedin.com/in/wendley-santos-248159219/"
                 whileHover={{
                   color: "#9333ea",
                   textDecoration: "underline",

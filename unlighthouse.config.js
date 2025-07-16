@@ -1,24 +1,28 @@
 export default {
   site: "https://wendleydev.vercel.app",
   scanner: {
-    sitemap: false,
-    // Coloque aqui apenas as rotas reais que carregam novas páginas
-    routes: ["/"],
+    sitemap: false, // Desliga sitemap automático
+    routes: ["/"], // Só precisa da home, o restante serão scrolls
   },
   router: {
-    ignoreHash: false, // NÃO ignore rotas com hash
+    ignoreHash: false, // Importante: NÃO ignorar hashes (#about etc.)
   },
   onPageReady: async ({ page, route }) => {
-    // Se estiver na home, força ele a rolar e esperar seções
     if (route === "/") {
-      await page.waitForTimeout(1000); // espera carregar
+      // Aguarda carregamento da página
+      await page.waitForTimeout(1000);
 
+      // Força scroll para cada seção para garantir renderização
       const sections = ["#about", "#projects", "#certificates", "#contact"];
-      for (const section of sections) {
-        await page.evaluate((id) => {
-          document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
-        }, section);
-        await page.waitForTimeout(1200); // espera animar e pintar
+
+      for (const id of sections) {
+        await page.evaluate((selector) => {
+          const el = document.querySelector(selector);
+          if (el) el.scrollIntoView({ behavior: "instant" });
+        }, id);
+
+        // Aguarda tempo suficiente para animações e pintura visual
+        await page.waitForTimeout(1200);
       }
     }
   },

@@ -15,19 +15,43 @@ export default function Home() {
       <Header />
       <Hero />
 
-      <Suspense fallback={<div>Carregando seção Sobre...</div>}>
+      <Suspense
+        fallback={
+          <div className="text-center py-10 text-gray-500">
+            Carregando seção sobre...
+          </div>
+        }
+      >
         <About />
       </Suspense>
 
-      <Suspense fallback={<div>Carregando projetos...</div>}>
+      <Suspense
+        fallback={
+          <div className="text-center py-10 text-gray-500">
+            Carregando seção projetos...
+          </div>
+        }
+      >
         <Projects />
       </Suspense>
 
-      <Suspense fallback={<div>Carregando certificados...</div>}>
+      <Suspense
+        fallback={
+          <div className="text-center py-10 text-gray-500">
+            Carregando seção certificados...
+          </div>
+        }
+      >
         <Certificates />
       </Suspense>
 
-      <Suspense fallback={<div>Carregando contato...</div>}>
+      <Suspense
+        fallback={
+          <div className="text-center py-10 text-gray-500">
+            Carregando seção contato...
+          </div>
+        }
+      >
         <Contact />
       </Suspense>
 
