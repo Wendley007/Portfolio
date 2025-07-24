@@ -89,7 +89,7 @@ const Header = () => {
   };
 
   const scrollTransition = scrolled
-    ? "bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg shadow-lg"
+    ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg"
     : "bg-white dark:bg-gray-900";
 
   return (
@@ -102,13 +102,13 @@ const Header = () => {
         transition-all duration-300 ease-in-out
         ${
           scrolled
-            ? "bg-white/30 dark:bg-black/30 backdrop-blur-sm shadow-lg"
+            ? "bg-white/50 dark:bg-black/50 backdrop-blur-lg shadow-lg"
             : "bg-white dark:bg-black"
         }
         text-black dark:text-white
       `}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <section className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <motion.div
           whileHover={{ scale: 1.05 }}
@@ -242,7 +242,7 @@ const Header = () => {
             />
           )}
         </AnimatePresence>
-      </div>
+      </section>
     </motion.header>
   );
 };
