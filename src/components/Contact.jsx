@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   Mail,
@@ -7,8 +7,6 @@ import {
   Github,
   MapPin,
   UserCheck,
-  Send,
-  Loader2,
 } from "lucide-react";
 
 // Informações de contato que serão exibidas na página
@@ -70,40 +68,6 @@ const itemVariants = {
 };
 
 export default function Contact() {
-  // Estado para os dados do formulário
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState("idle");
-
-  // Função chamada ao submeter o formulário
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-      setTimeout(() => setSubmitStatus("idle"), 3000);
-    }
-  };
-
-  // Função para lidar com a mudança nos campos do formulário
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }));
-  };
 
   return (
     <section id="contact" className="relative py-20 px-6 overflow-hidden">
@@ -128,7 +92,7 @@ export default function Contact() {
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Vamos conversar sobre seu projeto? Escolha o meio de contato de sua
-            preferência ou preencha o formulário abaixo.
+            preferência.
           </p>
         </motion.div>
 
@@ -138,7 +102,7 @@ export default function Contact() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {contactInfo.map((contact) => (
             <motion.a
@@ -168,123 +132,6 @@ export default function Contact() {
               </div>
             </motion.a>
           ))}
-        </motion.div>
-
-        {/* Formulário de envio de mensagem */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="relative max-w-2xl mx-auto"
-        >
-          <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl opacity-20 blur" />
-          <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-              Envie uma mensagem
-            </h3>
-
-            {/* Formulário de envio de dados */}
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                  >
-                    Nome
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400 focus:border-transparent transition-all duration-200"
-                    placeholder="Seu nome"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400 focus:border-transparent transition-all duration-200"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                >
-                  Mensagem
-                </label>
-                <textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={4}
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400 focus:border-transparent transition-all duration-200 resize-none"
-                  placeholder="Sua mensagem..."
-                />
-              </div>
-
-              {/* Botão de envio */}
-              <motion.button
-                type="submit"
-                disabled={isSubmitting}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className={`w-full py-3 px-6 flex items-center justify-center gap-2 text-white bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${
-                  isSubmitting ? "opacity-80 cursor-not-allowed" : ""
-                }`}
-              >
-                {/* Indicador de carregamento ou texto de envio */}
-                {isSubmitting ? (
-                  <Loader2 className="w-5 h-5 animate-spin" />
-                ) : (
-                  <>
-                    <Send className="w-5 h-5" />
-                    Enviar Mensagem
-                  </>
-                )}
-              </motion.button>
-
-              {/* Mensagens de sucesso ou erro ao enviar */}
-              {submitStatus === "success" && (
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="text-green-600 dark:text-green-400 text-center"
-                >
-                  Mensagem enviada com sucesso!
-                </motion.p>
-              )}
-
-              {submitStatus === "error" && (
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="text-red-600 dark:text-red-400 text-center"
-                >
-                  Erro ao enviar mensagem. Tente novamente.
-                </motion.p>
-              )}
-            </form>
-          </div>
         </motion.div>
       </div>
     </section>

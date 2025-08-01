@@ -1,6 +1,8 @@
 import React from "react";
 import Home from "./pages/Home";
 import { Helmet } from "react-helmet";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -15,8 +17,26 @@ function App() {
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="Wendley, portfólio, desenvolvedor web, React, Tailwind, front-end"
+          content="Wendley, portfólio, desenvolvedor web, React, Tailwind, front-end, JavaScript, TypeScript, Node.js"
         />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://wendleydev.vercel.app/" />
+        <meta property="og:title" content="Wendley.dev | Portfólio" />
+        <meta property="og:description" content="Portfólio de Wendley, desenvolvedor web focado em criar interfaces modernas, responsivas e experiências memoráveis com React, Tailwind e JavaScript." />
+        <meta property="og:image" content="https://wendleydev.vercel.app/assets/perfil2.webp" />
+        <meta property="og:site_name" content="Wendley.dev" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://wendleydev.vercel.app/" />
+        <meta property="twitter:title" content="Wendley.dev | Portfólio" />
+        <meta property="twitter:description" content="Portfólio de Wendley, desenvolvedor web focado em criar interfaces modernas, responsivas e experiências memoráveis com React, Tailwind e JavaScript." />
+        <meta property="twitter:image" content="https://wendleydev.vercel.app/assets/perfil2.webp" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://wendleydev.vercel.app/" />
 
         <link
           rel="preload"
@@ -78,9 +98,12 @@ function App() {
         </script>
       </Helmet>
 
-      <div className="font-sans min-h-screen bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
-        <Home />
-      </div>
+      <ThemeProvider>
+        <div className="font-sans min-h-screen bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
+          <Home />
+          <ScrollToTop />
+        </div>
+      </ThemeProvider>
     </>
   );
 }
