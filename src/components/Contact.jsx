@@ -1,45 +1,38 @@
-import React from "react";
-import { motion } from "framer-motion";
-import {
-  Mail,
-  Phone,
-  Linkedin,
-  Github,
-  MapPin,
-  UserCheck,
-} from "lucide-react";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Mail, Phone, Linkedin, Github, MapPin, UserCheck } from 'lucide-react';
 
 // Informações de contato que serão exibidas na página
 const contactInfo = [
   {
     icon: Mail,
-    label: "Email",
-    value: "wsanttossttreett@gmail.com",
-    href: "mailto:wsanttossttreett@gmail.com",
+    label: 'Email',
+    value: 'wendley.dev@gmail.com',
+    href: 'mailto:wsanttossttreett@gmail.com',
   },
   {
     icon: Phone,
-    label: "WhatsApp",
-    value: "(38) 99927-2911",
-    href: "https://wa.me/5538999272911",
+    label: 'WhatsApp',
+    value: '(38) 99927-2911',
+    href: 'https://wa.me/5538999272911',
   },
   {
     icon: Linkedin,
-    label: "LinkedIn",
-    value: "wendley-santos",
-    href: "https://www.linkedin.com/in/wendley-santos-248159219/",
+    label: 'LinkedIn',
+    value: 'wendley-santos',
+    href: 'https://www.linkedin.com/in/wendley-santos-248159219/',
   },
   {
     icon: Github,
-    label: "GitHub",
-    value: "wendley-dev",
-    href: "https://github.com/Wendley007",
+    label: 'GitHub',
+    value: 'wendley-dev',
+    href: 'https://github.com/Wendley007',
   },
   {
     icon: MapPin,
-    label: "Localização",
-    value: "Buritizeiro, MG",
-    href: "https://www.google.com/maps/place/Buritizeiro,+MG",
+    label: 'Localização',
+    value: 'Buritizeiro, MG',
+    href: 'https://www.google.com/maps/place/Buritizeiro,+MG',
   },
 ];
 
@@ -62,13 +55,12 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: 'easeOut',
     },
   },
 };
 
 export default function Contact() {
-
   return (
     <section id="contact" className="relative py-20 px-6 overflow-hidden">
       {/* Fundo com gradientes e texturas */}
@@ -104,7 +96,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {contactInfo.map((contact) => (
+          {contactInfo.map(contact => (
             <motion.a
               key={contact.label}
               href={contact.href}
