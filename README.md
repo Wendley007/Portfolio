@@ -274,7 +274,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 📞 Contato
 
-- **Email**: wsanttossttreett@gmail.com
+- **Email**: wendley.dev@gmail.com
 - **LinkedIn**: [Wendley Santos](https://www.linkedin.com/in/wendley-santos-248159219/)
 - **GitHub**: [@Wendley007](https://github.com/Wendley007)
 - **WhatsApp**: (38) 99927-2911

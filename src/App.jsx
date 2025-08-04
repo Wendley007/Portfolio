@@ -89,7 +89,7 @@ function App() {
             },
             description:
               "Portfólio de Wendley, desenvolvedor web com foco em criar interfaces modernas, responsivas e experiências únicas com React, Tailwind e JavaScript.",
-            email: "mailto:wsanttossttreett@gmail.com",
+            email: "mailto:wendley.dev@gmail.com",
             address: {
               "@type": "PostalAddress",
               addressCountry: "BR",
