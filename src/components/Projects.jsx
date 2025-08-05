@@ -1,7 +1,7 @@
-import React from "react";
-import { motion } from "framer-motion";
-import projeto1 from "../assets/projeto1.webp";
-import projeto2 from "../assets/projeto2.webp";
+import React from 'react';
+import { motion } from 'framer-motion';
+import projeto1 from '../assets/projeto1.webp';
+import projeto2 from '../assets/projeto2.webp';
 import {
   ExternalLink,
   Github,
@@ -9,33 +9,33 @@ import {
   Calendar,
   Code2,
   Users,
-} from "lucide-react";
+} from 'lucide-react';
 
 // Lista de projetos a serem exibidos na seção
 const projects = [
   {
-    title: "Catálogo Web",
+    title: 'Catálogo Web',
     description:
-      "Sistema completo para gestão de feiras livres, com cadastro de feirantes, produtos e categorias.",
+      'Sistema completo para gestão de feiras livres, com cadastro de feirantes, produtos e categorias.',
     image: projeto1,
-    link: "https://feiralivre.vercel.app/",
-    github: "https://github.com/Wendley007/Cat-logoWeb.git",
-    techs: ["React", "Firebase", "Tailwind CSS", "JavaScript"],
-    date: "2024",
-    role: "Full Stack Developer",
-    teamSize: "Individual",
+    link: 'https://feiralivre.vercel.app/',
+    github: 'https://github.com/wendleydev/catalogo-web.git',
+    techs: ['React', 'Firebase', 'Tailwind CSS', 'JavaScript'],
+    date: '2024',
+    role: 'Full Stack Developer',
+    teamSize: 'Individual',
   },
   {
-    title: "Portfólio",
+    title: 'Portfólio',
     description:
-      "Projeto acadêmico desenvolvido com HTML, CSS e JavaScript puro, com foco em estruturação de conteúdo, responsividade e design limpo.",
+      'Projeto acadêmico desenvolvido com HTML, CSS e JavaScript puro, com foco em estruturação de conteúdo, responsividade e design limpo.',
     image: projeto2,
-    link: "https://trabalho-academico-portfolio.vercel.app/",
-    github: "https://github.com/Wendley007/Trabalho-Academico-Portfolio",
-    techs: ["HTML", "CSS", "JavaScript"],
-    date: "2022",
-    role: "Front-end Developer",
-    teamSize: "Individual",
+    link: 'https://trabalho-academico-portfolio.vercel.app/',
+    github: 'https://github.com/wendleydev/Trabalho-Academico-Portfolio.git',
+    techs: ['HTML', 'CSS', 'JavaScript'],
+    date: '2022',
+    role: 'Front-end Developer',
+    teamSize: 'Individual',
   },
 ];
 

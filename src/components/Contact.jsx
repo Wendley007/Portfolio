@@ -25,8 +25,8 @@ const contactInfo = [
   {
     icon: Github,
     label: 'GitHub',
-    value: 'wendley-dev',
-    href: 'https://github.com/Wendley007',
+    value: 'wendley.dev',
+    href: 'https://github.com/wendleydev',
   },
   {
     icon: MapPin,

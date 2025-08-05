@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import {
   Mail,
   Phone,
@@ -12,7 +12,7 @@ import {
   Heart,
   Code,
   ArrowUpCircle,
-} from "lucide-react";
+} from 'lucide-react';
 
 // Variantes para animação de entrada do footer
 const footerVariants = {
@@ -34,7 +34,7 @@ const itemVariants = {
     opacity: 1,
     transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: 'easeOut',
     },
   },
 };
@@ -42,50 +42,50 @@ const itemVariants = {
 // Dados para as redes sociais
 const socialLinks = [
   {
-    name: "GitHub",
+    name: 'GitHub',
     icon: Github,
-    url: "https://github.com/Wendley007",
-    color: "hover:text-gray-600 dark:hover:text-gray-400",
-    hoverColor: "#333",
+    url: 'https://github.com/wendleydev',
+    color: 'hover:text-gray-600 dark:hover:text-gray-400',
+    hoverColor: '#333',
   },
   {
-    name: "LinkedIn",
+    name: 'LinkedIn',
     icon: Linkedin,
-    url: "https://www.linkedin.com/in/wendley-santos-248159219/",
-    color: "hover:text-blue-500 dark:hover:text-blue-400",
-    hoverColor: "#0077B5",
+    url: 'https://www.linkedin.com/in/wendley-santos-248159219/',
+    color: 'hover:text-blue-500 dark:hover:text-blue-400',
+    hoverColor: '#0077B5',
   },
   {
-    name: "Instagram",
+    name: 'Instagram',
     icon: Instagram,
-    url: "https://instagram.com/",
-    color: "hover:text-pink-500 dark:hover:text-pink-400",
-    hoverColor: "#E1306C",
+    url: 'https://www.instagram.com/wendley.oficial/',
+    color: 'hover:text-pink-500 dark:hover:text-pink-400',
+    hoverColor: '#E1306C',
   },
   {
-    name: "Facebook",
+    name: 'Facebook',
     icon: Facebook,
-    url: "https://facebook.com/",
-    color: "hover:text-blue-400 dark:hover:text-blue-300",
-    hoverColor: "#1877F2",
+    url: 'https://www.facebook.com/wendlley.santtos.7',
+    color: 'hover:text-blue-400 dark:hover:text-blue-300',
+    hoverColor: '#1877F2',
   },
 ];
 
 // Links de navegação
 const navLinks = [
-  { name: "Início", url: "#home" },
-  { name: "Sobre", url: "#about" },
-  { name: "Projetos", url: "#projects" },
-  { name: "Certificados", url: "#certificates" },
-  { name: "Contato", url: "#contact" },
+  { name: 'Início', url: '#home' },
+  { name: 'Sobre', url: '#about' },
+  { name: 'Projetos', url: '#projects' },
+  { name: 'Certificados', url: '#certificates' },
+  { name: 'Contato', url: '#contact' },
 ];
 
 // Texto para animação de digitação
-const typingText = "Construindo com código, sonhando com propósito.";
+const typingText = 'Construindo com código, sonhando com propósito.';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState('');
   const [index, setIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -99,16 +99,16 @@ export default function Footer() {
       }
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility);
 
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
   // Função para rolar suavemente para o topo
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -116,11 +116,11 @@ export default function Footer() {
     // Intervalo para a animação de digitação
     const interval = setInterval(() => {
       if (index < typingText.length) {
-        setDisplayText((prev) => prev + typingText[index]);
+        setDisplayText(prev => prev + typingText[index]);
         setIndex(index + 1);
       } else {
         setTimeout(() => {
-          setDisplayText("");
+          setDisplayText('');
           setIndex(0);
         }, 1000);
       }
@@ -139,8 +139,8 @@ export default function Footer() {
         {/* Animated decorator line */}
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          animate={{ width: '100%' }}
+          transition={{ duration: 1.5, ease: 'easeInOut' }}
           className="h-1 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 mb-12"
         />
 
@@ -161,17 +161,17 @@ export default function Footer() {
               </span>
             </h3>
             <div className="h-16 flex items-start">
-              {" "}
+              {' '}
               {/* Fixed height container for typing effect */}
               <p className="text-gray-600 dark:text-gray-300 max-w-xs font-medium">
                 {displayText}
                 <span className="inline-block w-1 h-5 ml-1 bg-purple-500 animate-pulse" />
               </p>
             </div>
-            {/* <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
               Desenvolvedor front-end especializado em criar experiências
               digitais bonitas e funcionais.
-            </p> */}
+            </p>
           </motion.div>
 
           {/* Seção 2: Contato */}
@@ -180,7 +180,7 @@ export default function Footer() {
               Contato
               <motion.span
                 initial={{ width: 0 }}
-                whileInView={{ width: "100%" }}
+                whileInView={{ width: '100%' }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="absolute bottom-0 left-0 h-0.5 bg-purple-500"
@@ -190,18 +190,18 @@ export default function Footer() {
               <motion.a
                 href="mailto:wsanttossttreett@hotmail.com"
                 whileHover={{ x: 5, scale: 1.01 }}
-                transition={{ type: "spring", stiffness: 400 }}
+                transition={{ type: 'spring', stiffness: 400 }}
                 className="flex items-center text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors group"
               >
                 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 dark:bg-gray-800 mr-3 group-hover:bg-purple-200 dark:group-hover:bg-purple-900 transition-colors">
                   <Mail className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                 </span>
-                <span className="text-sm">wsanttossttreett@hotmail.com</span>
+                <span className="text-sm">wendley.dev@gmail.com</span>
               </motion.a>
               <motion.a
                 href="tel:+5538999272911"
                 whileHover={{ x: 5, scale: 1.01 }}
-                transition={{ type: "spring", stiffness: 400 }}
+                transition={{ type: 'spring', stiffness: 400 }}
                 className="flex items-center text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors group"
               >
                 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 dark:bg-gray-800 mr-3 group-hover:bg-purple-200 dark:group-hover:bg-purple-900 transition-colors">
@@ -211,7 +211,7 @@ export default function Footer() {
               </motion.a>
               <motion.div
                 whileHover={{ x: 5, scale: 1.01 }}
-                transition={{ type: "spring", stiffness: 400 }}
+                transition={{ type: 'spring', stiffness: 400 }}
                 className="flex items-center text-gray-600 dark:text-gray-300 group"
               >
                 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 dark:bg-gray-800 mr-3 group-hover:bg-purple-200 dark:group-hover:bg-purple-900 transition-colors">
@@ -228,18 +228,18 @@ export default function Footer() {
               Navegação
               <motion.span
                 initial={{ width: 0 }}
-                whileInView={{ width: "100%" }}
+                whileInView={{ width: '100%' }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="absolute bottom-0 left-0 h-0.5 bg-purple-500"
               />
             </h4>
             <nav className="grid grid-cols-2 gap-y-2 gap-x-4 md:flex md:flex-col md:space-y-3 md:gap-0">
-              {navLinks.map((link) => (
+              {navLinks.map(link => (
                 <motion.a
                   key={link.name}
                   href={link.url}
-                  whileHover={{ x: 5, color: "#9333ea" }}
+                  whileHover={{ x: 5, color: '#9333ea' }}
                   className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm md:text-base"
                 >
                   {link.name}
@@ -257,14 +257,14 @@ export default function Footer() {
               Redes Sociais
               <motion.span
                 initial={{ width: 0 }}
-                whileInView={{ width: "100%" }}
+                whileInView={{ width: '100%' }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="absolute bottom-0 left-0 h-0.5 bg-purple-500"
               />
             </h4>
             <div className="flex flex-wrap gap-3 md:flex-col md:space-y-3 md:gap-0">
-              {socialLinks.map((social) => (
+              {socialLinks.map(social => (
                 <motion.a
                   key={social.name}
                   href={social.url}
@@ -272,7 +272,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label={`Acessar ${social.name} de Wendley`}
                   whileHover={{ x: 5, scale: 1.01 }}
-                  transition={{ type: "spring", stiffness: 400 }}
+                  transition={{ type: 'spring', stiffness: 400 }}
                   className={`flex items-center text-gray-600 dark:text-gray-300 ${social.color} transition-colors`}
                 >
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 mr-3 transition-colors hover:bg-opacity-70">
@@ -294,7 +294,7 @@ export default function Footer() {
           transition={{ duration: 0.5 }}
           className="flex justify-center items-center space-x-6 md:hidden mb-8"
         >
-          {socialLinks.map((social) => (
+          {socialLinks.map(social => (
             <motion.a
               key={social.name}
               href={social.url}
@@ -303,7 +303,7 @@ export default function Footer() {
               aria-label={`Acessar ${social.name} de Wendley`}
               whileHover={{ y: -5, scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400 }}
+              transition={{ type: 'spring', stiffness: 400 }}
             >
               <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all">
                 <social.icon className={`w-5 h-5 ${social.color}`} />
@@ -346,12 +346,12 @@ export default function Footer() {
           {/* Copyright */}
           <div className="mb-4 md:mb-0 flex items-center">
             <span>
-              &copy; {currentYear}{" "}
+              &copy; {currentYear}{' '}
               <motion.a
                 href="https://www.linkedin.com/in/wendley-santos-248159219/"
                 whileHover={{
-                  color: "#9333ea",
-                  textDecoration: "underline",
+                  color: '#9333ea',
+                  textDecoration: 'underline',
                 }}
                 className="transition-colors hover:underline font-medium"
               >
@@ -381,7 +381,7 @@ export default function Footer() {
           scale: isVisible ? 1 : 0.5,
           y: isVisible ? 0 : 20,
         }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
+        transition={{ duration: 0.4, ease: 'easeInOut' }}
         onClick={scrollToTop}
         className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-700 dark:from-purple-800 dark:to-pink-900 text-white shadow-xl backdrop-blur-md bg-opacity-60 transition-all duration-300 ease-in-out
     hover:scale-110 hover:shadow-2xl hover:from-purple-700 hover:to-pink-800
